@@ -1,7 +1,5 @@
 const express = require('express');
 const http = require('http');
-const Chart = require('chart.js');
-const { createCanvas } = require('canvas');
 const socketIO = require('socket.io');
 
 const app = express();
@@ -17,15 +15,11 @@ function generateRandomData() {
   return data;
 }
 
-// Route pour la page principale
-app.use(express.static('public'));
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/login.html');
-});
+app.use(express.static('./public'));
 
-// Route pour la page principale
-app.use(express.static('public'));
-app.get('/EmployeeData', (req, res) => {
+
+// Route pour la page Graphe
+app.get('/Data', (req, res) => {
   res.sendFile(__dirname + '/indexGraphe.html');
 });
 

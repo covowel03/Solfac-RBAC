@@ -3,4 +3,6 @@
 ## To run the server :
 
 - clone repository
-- npm run start2 (start was just to test node js)
+- npm run start2
+- npm run start
+- npm run dev
